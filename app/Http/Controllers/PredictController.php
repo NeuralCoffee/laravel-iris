@@ -10,7 +10,7 @@ class PredictController extends Controller
     public function predict(Request $request)
     {
         // Percorso del file contenente il modello addestrato
-        $modelFile = public_path('/Models/Iris/iris.rbx');
+        $modelFile = public_path('/models/iris/iris.rbx');
 
         // Carica il modello serializzato
         $serializedModel = file_get_contents($modelFile);
@@ -24,7 +24,7 @@ class PredictController extends Controller
         // Esempio di etichetta (classe) corrispondente al dato di input
         $label = '';  // Cambia con l'etichetta appropriata
 
-        // Crea un oggetto Dataset
+        // Crea un oggetto dataset
         $inputDataset = Labeled::build([$inputData], [$label]);
 
         // Effettua la previsione

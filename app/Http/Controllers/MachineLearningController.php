@@ -12,7 +12,7 @@ class MachineLearningController extends Controller
     public function trainModel()
     {
 
-        $training = Labeled::fromIterator(new NDJSON(public_path('/Dataset/Iris/dataset.ndjson')));
+        $training = Labeled::fromIterator(new NDJSON(public_path('/dataset/iris/dataset.ndjson')));
 
         $testing = $training->randomize()->take(10);
 
@@ -21,7 +21,7 @@ class MachineLearningController extends Controller
         $estimator->train($training);
 
         // Salva il modello addestrato (opzionale)
-        $modelFilePath = public_path('/Models/Iris/iris.rbx');
+        $modelFilePath = public_path('/models/iris/iris.rbx');
         file_put_contents($modelFilePath, serialize($estimator));
 
         $predictions = $estimator->predict($testing);
