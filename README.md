@@ -26,7 +26,7 @@ cp .env.example .env
 php artisan key:generate</code>
 
 ## Utilizzo
- Segui la rotta <code>/generate-model</code> per salvare il tuo modello
+ Segui la rotta <code>/generate-model</code> per salvare il tuo modello<br>
  Segui la rotta <code>/prediction</code> per ottenere la tua previsione
 
  ## Licenza
