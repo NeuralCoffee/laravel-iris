@@ -19,9 +19,15 @@ Per iniziare, segui questi passaggi:
 
 1. Clona la repository sul tuo ambiente di sviluppo locale:
 
-```bash
-git clone https://github.com/NeuralCoffee/laravel-iris.git
+
+<code>git clone https://github.com/NeuralCoffee/laravel-iris.git
 composer install
 cp .env.example .env
-php artisan key:generate
+php artisan key:generate</code>
 
+## Utilizzo
+ Segui la rotta <code>/generate-model</code> per salvare il tuo modello
+ Segui la rotta <code>/prediction</code> per ottenere la tua previsione
+
+ ## Licenza
+Il codice è rilasciato con licenza <a href="https://www.gnu.org/licenses/licenses.it.html">GNU General Public License</a>.
